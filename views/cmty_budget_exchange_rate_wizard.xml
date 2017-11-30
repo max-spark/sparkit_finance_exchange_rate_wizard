@@ -10,8 +10,7 @@
             <field name="amount"/>
           </group>
           <footer>
-              <button type="object" name="do_mass_update" string="Mass
-                Update" class="oe_highlight" />
+              <button type="object" name="do_mass_update" string="Update" class="oe_highlight" />
               <button special="cancel" string="Cancel"/>
           </footer>
         </form>
