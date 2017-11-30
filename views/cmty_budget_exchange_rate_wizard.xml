@@ -1,0 +1,33 @@
+<openerp>
+  <data>
+    <record id="cmty_budget_xchange_rate_update_wizard" model="ir.ui.view">
+      <field name="name">Community Budget Exchange Rate Update Wizard</field>
+      <field name="model">sparkit.budget_xchange_rate_wizard</field>
+      <field name="arch" type="xml">
+        <form>
+          <field name="project_ids"/>
+          <group>
+            <field name="amount"/>
+          </group>
+          <footer>
+              <button type="object" name="do_mass_update" string="Mass
+                Update" class="oe_highlight" />
+              <button special="cancel" string="Cancel"/>
+          </footer>
+        </form>
+      </field>
+    </record>
+
+    <act_window id="action_cmty_budget_xchange_rate_update_wizard"
+      name="Cmty Budget Xchange Rate Update"
+      src_model="sparkit.sparkproject"
+      res_model="sparkit.budget_xchange_rate_wizard" view_mode="form" target="new"
+      multi="True"/>
+
+    <menuitem id="cmty_budget_exchange_rate_update_menu" name="Cmty Budget Xchange Rate Update"
+      action="action_cmty_budget_xchange_rate_update_wizard"
+      parent="sparkit.main_projects_configuration_menu"
+      groups="sparkit.f_a_user"/>
+
+  </data>
+ </openerp>
